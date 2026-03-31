@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Microplastic Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1> AI Microplastic Detection</h1>
+
+    <p class="subtitle">
+        Enter water quality parameters to detect microplastic contamination level
+    </p>
+
+    <div class="form">
+
+        <!-- INPUTS WITH EXAMPLES + TOOLTIPS -->
+
+        <input type="number" id="ph"
+            placeholder="pH (eg: 7.2)"
+            title="Water acidity level (0-14)">
+
+        <input type="number" id="Hardness"
+            placeholder="Hardness (eg: 200 mg/L)"
+            title="Mineral content in water">
+
+        <input type="number" id="Solids"
+            placeholder="Solids - TDS (eg: 22000 ppm)"
+            title="Total dissolved solids">
+
+        <input type="number" id="Chloramines"
+            placeholder="Chloramines (eg: 7 ppm)"
+            title="Water disinfectant level">
+
+        <input type="number" id="Sulfate"
+            placeholder="Sulfate (eg: 330 mg/L)"
+            title="Industrial contamination indicator">
+
+        <input type="number" id="Conductivity"
+            placeholder="Conductivity (eg: 420 μS/cm)"
+            title="Ion concentration in water">
+
+        <input type="number" id="Organic_carbon"
+            placeholder="Organic Carbon (eg: 14 ppm)"
+            title="Carbon released by microplastics">
+
+        <input type="number" id="Trihalomethanes"
+            placeholder="Trihalomethanes (eg: 65 μg/L)"
+            title="Chemical byproducts in water">
+
+        <input type="number" id="Turbidity"
+            placeholder="Turbidity (eg: 4.0 NTU)"
+            title="Cloudiness (main microplastic indicator)">
+
+        <!-- BUTTON -->
+        <button id="predictBtn" onclick="predict()">
+            🚀 Analyze Water
+        </button>
+
+    </div>
+
+    <!-- LOADING -->
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- RESULT -->
+    <div id="result" class="result-card"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
